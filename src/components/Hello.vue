@@ -8,11 +8,7 @@
 
 <script>
 // import show from './Show'
-const show = resolve => {
-  require.ensure(['./Show.vue'], () => {
-    resolve(require('./Show.vue'))
-  })
-}
+const show = () => import('./Show.vue')
 export default {
   name: 'hello',
   data () {
